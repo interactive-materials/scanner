@@ -6,9 +6,9 @@
 
 @font-face {
   font-family: 'Tabular-Variable';
-  src: url('../fonts/Tabular-Variable.woff2') format('woff2'),
-       url('../fonts/Tabular-Variable.woff') format('woff'),
-       url('../fonts/Tabular-Variable.ttf') format('truetype');
+  src: url('fonts/Tabular-Variable.woff2') format('woff2'),
+       url('fonts/Tabular-Variable.woff') format('woff'),
+       url('fonts/Tabular-Variable.ttf') format('truetype');
        font-weight: 300 700;
        font-display: swap;
        font-style: normal;
