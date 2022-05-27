@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Scanner!</title>
+    <meta name="description" content="Canvas on Glitch" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/lottie-player.js"></script>
+    <script src="/html5-qrcode.min.js"></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="start-screen" class="screen active">
+        <div id="start" class="button big">start</div>
+      </div>
+
+      <div id="scanning-screen" class="screen">
+        <div id="debug-bar">
+          <div id="debug-text"></div>
+        </div>
+        <canvas id="canvas-scanning"></canvas>
+        <div
+          id="reader"
+          style="display: inline-block; visibility: hidden"
+        ></div>
+      </div>
+
+      <div id="info-screen" class="screen">
+        <div id="info-image"></div>
+        <div id="info-bar">
+          <div id="info-text"></div>
+        </div>
+
+        <div id="edit-btn" class="button big">✏️</div>
+      </div>
+
+      <div id="edit-screen" class="screen">
+        <div id="edit-name"></div>
+
+        <div id="edit-image" class="edit-category">
+          <div id="edit-image-placeholder"></div>
+          <div id="edit-image-btn" class="button big">📷</div>
+        </div>
+
+        <div id="edit-sound" class="edit-category">
+          <div id="edit-sound-list"></div>
+        </div>
+
+        <div id="edit-done-btn" class="button big">done</div>
+
+        <div id="edit-clear-btn" class="button">clear</div>
+
+        <div id="edit-clearall-btn" class="button">clear all</div>
+      </div>
+    </div>
+    
+    <div id="anim-container">
+        <lottie-player class="anim" id="looking-anim" src="animation/looking.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <lottie-player class="anim" id="dead-face-anim" src="animation/deadFace.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <lottie-player class="anim" id="derp-face-anim" src="animation/derpFace.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <lottie-player class="anim" id="no-message-anim" src="animation/noMessage.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <lottie-player class="anim" id="reading-anim" src="animation/reading.json" background="transparent"  speed="1"></lottie-player>
+        <lottie-player class="anim" id="sleep-anim" src="animation/sleep.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+    </div>
+
+    <div id="stage">
+      <video id="video-waiting" playsinline></video>
+      <canvas id="canvas-brightness"></canvas>
+    </div>
+  </body>
+</html>
